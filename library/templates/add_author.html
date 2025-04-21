@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add author</title>
+    </head>
+    <body>
+        <h1>Add author</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+
+        <a href="{% url 'add_book' %}">Add book</a>
+    </body>
+</html>
